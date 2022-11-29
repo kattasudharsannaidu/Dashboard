@@ -1,0 +1,142 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+:root {
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	--blue-100 : hsl(195, 100%, 36%);
+	--blue-500: hsl(195, 100%, 30%);
+	--black-100: hsl(0, 0%, 30%);
+	--pink-100: hsl(298, 89%, 61%);
+	--white: white;
+	font-size: 10px;
+	--font-size-100: 1rem;
+	--font-size-200: 1.5rem;
+	--font-size-300: 2rem;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: unset;
+}
+
+::placeholder {
+	color: var(--pink-100);
+}
+
+body {
+	background-image: url("https://jivoxassets.s3.amazonaws.com/asset/2022/6/26642-0-aim629a6f6c96a6b.jpg");
+	min-height: 100vh;
+}
+
+.container {
+	display: grid;
+	grid-template-areas: 
+		"logo top-pane"
+		"left-pane center-pane";
+	grid-template-rows: 10rem 1fr;
+	grid-template-columns: minmax(15vw,20rem) 1fr;
+	gap: 1rem;
+	max-width: 144rem;
+	min-height: inherit;
+	margin-inline: auto;
+	padding-inline: 5rem;
+}
+
+.logo-container {
+	grid-area: "logo";
+	display: grid;
+	place-items: center;
+}
+
+.top-pane {
+	grid-area: "top-pane";
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.left-pane {
+	grid-area: "left-pane";
+}
+
+.center-pane {
+	grid-area: "center-pane";
+}
+
+img.logo{
+	height: 5rem;
+	width: 15rem;
+	border-right-width: 0;
+}
+
+.heading {
+	color: #008CBA;
+	font-size: calc(1.5rem + 3vw);
+	text-align: center;
+	user-select: none;
+}
+
+.search {
+	outline: 0;
+	padding: 1rem;
+	color: var(--pink-100);
+	border: 0.2rem solid var(--blue-100);
+	border-radius: 2rem;
+	width: 27rem;
+}
+
+.search:focus {
+	border-color: var(--blue-500);
+}
+
+.menu-container {
+	display: flex;
+	flex-direction: column;
+	gap: 2.5rem;
+	padding-inline: 3rem;
+}
+
+.menu-item {
+	padding: 0.5rem 1rem;
+	border-width: 0.1rem;
+	border-radius: 0.4rem;
+	text-align: center;
+	font-size: var(--font-size-200);
+	background: var(--pink-100);
+	color: var(--white);
+	cursor: pointer;
+}
+
+.link-buttons-container {
+	display: flex;
+	flex-wrap: wrap;
+	border: 0.2rem solid var(--blue-100);
+	border-radius: 0.6rem;
+	padding: 1rem;
+}
+
+.link-button {
+	width: 25rem;
+	padding: 1.6rem 3.2rem;
+	text-align: center;
+	font-size: 1.4rem;
+	margin: 0.6rem 0.4rem;
+	-webkit-transition-duration: 0.4s;
+	transition-duration: 0.4s;
+	cursor: pointer;
+	background-color: white;
+	color: black;
+	border: 0.2rem solid #008CBA;
+	border-radius: 4.4rem;
+}
+
+.link-button:hover {
+	background-color: var(--pink-100);
+	color: var(--white);
+}
